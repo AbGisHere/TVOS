@@ -298,7 +298,7 @@ Depth is optical, not decorative. Every slab is glass over a lit backdrop, separ
 
 ### Glass Material
 - **Clear glass:** bezel width 14dp (22dp focused, capped at 85% of the shorter half-size); inward bend 26dp (44dp focused) along the circular profile m = 1 - sqrt(1 - t^2); dispersion 0.10 (0.14 focused) with red bending more than blue; backdrop seen through glass is saturated 1.45x and brightened 1.12x; Fresnel F = 0.03 + 0.97·m^2.5 mixes toward rim reflection; light from the top left (-0.55, -0.85); bright 1.6dp top rim (0.5, 0.8 focused), half-strength side rim, bottom rim darkened 35%; a 14dp soft inner glow; a top-to-bottom face lift of 0.035 (0.07 focused); one diagonal sheen sweep over 650ms on focus.
-- **Frosted glass:** six soft taps around the bent point, then a cool dark tint. Frost radius sets the variant: control bar 12 (translucent, stays glassy), remove menu 13 (frosted over the host tile's own pre-blurred poster), panels 24 (dense: mostly tint, 97% mix). The lens in the control bar is clear glass with frost 6.
+- **Frosted glass:** six soft taps around the bent point, then a cool dark tint. Frost radius sets the variant: control bar 12 (translucent, stays glassy), remove menu 13 (frosted over the host tile's own pre-blurred poster), panels 24 (glassy: 82% frost mix, so the scene's light and colour still read through). The lens in the control bar is clear glass with frost 6.
 - **Image under glass:** posters sit under the glass and bend with it; their lower half darkens to 16% for text, with the bezel exempt so fringes show on every edge. Favourite banners sit inset at 80% under the glass so only their plain margin reaches the rim.
 
 ### Named Rules
@@ -330,10 +330,10 @@ Long-press OK (500ms) on a removable tile: a 148x72 frosted panel centred on the
 
 ### Panels (Control Center style)
 Dense frosted glass, radius 22, anchored top-right under the bar.
-- **Inputs:** the TV's back panel (a 440×178dp sheet) as a recessed glass plate (radius 18, inset shadow) holding real connector drawings: HDMI trapezoid sockets, yellow/white/red RCA jacks for AV, a hex coax socket with a gold pin for Antenna. The live port shows a plugged-in cable with a green signal LED and its device name in green ("Jio Set-top Box"). Empty ports read "No signal" (never a guessed state). Under each socket: port name (12.5/700) and status. Focus is a glass chip that lifts 3dp; a detail line under the plate explains the focused port and what OK does.
-- **Wi-Fi:** one compact row (500×112dp). On the left, a 30dp signal glyph, a small "Wi-Fi" eyebrow (11.5/600), the network name (19/700) and one meta line ("Connected · 5 GHz · 292 Mbps · Good signal"). On the right, two round glass buttons (Networks, Settings). No title, divider or detail line: the labels say enough.
+- **Inputs:** the TV's back panel (a 410×164dp sheet) as a recessed glass plate (radius 18, inset shadow) holding real connector drawings: HDMI trapezoid sockets, yellow/white/red RCA jacks for AV, a hex coax socket with a gold pin for Antenna. The live port shows a plugged-in cable with a green signal LED and its device name in green ("Jio Set-top Box"). Empty ports read "No signal" (never a guessed state). Under each socket: port name (12.5/700) and status. Focus is a glass chip that lifts 3dp; a detail line under the plate explains the focused port and what OK does.
+- **Wi-Fi:** one compact row (430×96dp). On the left, a 30dp signal glyph, a small "Wi-Fi" eyebrow (11.5/600), the network name (19/700) and one meta line ("Connected · 5 GHz · 292 Mbps · Good signal"). On the right, two round glass buttons (Networks, Settings). No title, divider or detail line: the labels say enough.
 - **Settings:** one row of six round glass buttons (Picture, Sound, Display, Apps, Network, All) with one-word labels and no sub-text. The focused button becomes a solid "pearl" (white radial gradient, dark icon, scale 1.12), and a single detail line below explains it.
-- **Round glass button** (shared): a 48dp orb of radial white glass (top highlight, bottom inner shadow, soft drop shadow), a 20dp icon and a 12/600 label. Used where a panel offers a few actions; never boxed in cards.
+- **Round glass button** (shared): a 40dp orb of radial white glass (top highlight, bottom inner shadow, soft drop shadow), a 17dp icon and an 11.5/600 label. Used where a panel offers a few actions; never boxed in cards.
 - **Focused row:** glass-lit gradient, inner top highlight 0.5, inner bottom shade, 2dp/10dp soft drop.
 
 ### All Apps
@@ -370,3 +370,8 @@ One time-based clock drives glass and text, frame-rate independent (dt capped at
 - **Don't** resize the control-bar label slot per item; open it once and crossfade the text.
 - **Don't** let a panel cover the content rows, or leave tile text visible under a panel.
 - **Don't** set text below 11.5dp; it has to be read from 2-3 m away.
+
+
+## Motion: All apps
+
+All apps opens with transform and opacity only, with no live blur. The home screen and glass sink back (scale 0.94, opacity 0.85, 320ms, cubic-bezier(.2,.9,.25,1)). A dark radial glass veil fades in over 200ms. Banners rise from 16dp below at 0.94 scale in a ripple of 14ms per tile. Closing is quicker (140–160ms) and reverses the motion. Panels are sized for a corner of a large screen viewed from 2–3 m: Wi-Fi 430×96, Settings 420×148, Inputs 410×164.
