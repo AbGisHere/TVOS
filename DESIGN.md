@@ -316,7 +316,7 @@ Rounded rectangles throughout, with radius growing with the object: menu items 9
 
 ### Control Bar
 Icons only, in one translucent frosted pill (44dp tall, 34dp icon cells, 2dp gaps, a 2dp × 14dp rounded divider before the profile avatar, shorter than the icons with 9dp space each side). Order: Jio Set-top Box, Inputs, Wi-Fi, Settings, Screensaver, All apps, Profile. Resting icons are ink-body; the focused icon turns ink.
-- **Lens:** a clear glass capsule glides to the focused icon over 460ms with a back-out overshoot, stretching up to 16dp horizontally with its speed and settling back (40ms time constant); fades in and out over a 70ms time constant.
+- **Lens:** a clear glass **circle** (diameter = icon cell − 6dp) centred on the focused icon, with a clear ring of the pill's glass around it. It glides over 460ms with a back-out overshoot, stretches up to 16dp horizontally with its speed and settles back to a circle (40ms time constant); fades in and out over a 70ms time constant.
 - **Label slot:** one slot at the pill's left edge opens once when focus enters the bar (max 104dp, 450ms), then only its text crossfades (140ms out, 3dp drop). It never resizes per item.
 
 ### Continue Watching Tile
@@ -330,9 +330,10 @@ Long-press OK (500ms) on a removable tile: a 148x72 frosted panel centred on the
 
 ### Panels (Control Center style)
 Dense frosted glass, radius 22, anchored top-right under the bar.
-- **Inputs:** the TV's back panel as a recessed glass plate (radius 18, inset shadow) holding real connector drawings: HDMI trapezoid sockets, yellow/white/red RCA jacks for AV, a hex coax socket with a gold pin for Antenna. The live port shows a plugged-in cable with a green signal LED and its device name in green ("Jio Set-top Box"). Empty ports read "No signal" (never a guessed state). Under each socket: port name (12.5/700) and status. Focus is a glass chip that lifts 3dp; a detail line under the plate explains the focused port and what OK does.
-- **Wi-Fi:** a hero card (radius 16) with a four-arc signal meter (stroke 7, round caps), the network name, a live dot, and stat chips (full-round, 0.1 white fill, inner top highlight); below it, two full-round pill actions.
-- **Settings:** a 3x2 grid of 64dp tiles (radius 14) with a 32dp icon well (radius 10), name and hint. Focus scales 1.04.
+- **Inputs:** the TV's back panel (a 440×178dp sheet) as a recessed glass plate (radius 18, inset shadow) holding real connector drawings: HDMI trapezoid sockets, yellow/white/red RCA jacks for AV, a hex coax socket with a gold pin for Antenna. The live port shows a plugged-in cable with a green signal LED and its device name in green ("Jio Set-top Box"). Empty ports read "No signal" (never a guessed state). Under each socket: port name (12.5/700) and status. Focus is a glass chip that lifts 3dp; a detail line under the plate explains the focused port and what OK does.
+- **Wi-Fi:** quiet and uncarded. A 30dp signal glyph beside the network name (21/700), with one meta line underneath ("Connected · 5 GHz · 292 Mbps · Good signal", 12/500 at 0.6 white). Then a gradient hairline and two round glass buttons (Networks, Settings) with the shared detail line below.
+- **Settings:** one row of six round glass buttons (Picture, Sound, Display, Apps, Network, All) with one-word labels and no sub-text. The focused button becomes a solid "pearl" (white radial gradient, dark icon, scale 1.12), and a single detail line below explains it.
+- **Round glass button** (shared): a 48dp orb of radial white glass (top highlight, bottom inner shadow, soft drop shadow), a 20dp icon and a 12/600 label. Used where a panel offers a few actions; never boxed in cards.
 - **Focused row:** glass-lit gradient, inner top highlight 0.5, inner bottom shade, 2dp/10dp soft drop.
 
 ### All Apps
