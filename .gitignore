@@ -1,0 +1,21 @@
+# build
+.gradle/
+.kotlin/
+build/
+app/build/
+local.properties
+.idea/
+*.iml
+
+# local measurements
+mem-logs/
+
+# AI agent / skill tooling (not part of the app)
+.claude/
+.agent/
+.agents/
+.codex/
+.devin/
+.gemini/
+.opencode/
+.impeccable/
